@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global B2B Company Registry Schema &amp; Multi-Country Data Benchmark (2026)</title>
+  <meta name="description" content="Open technical specification unifying 31 national B2B company registries (NAICS, NACE Rev. 2, KVK SBI, Handelsregister, SCIAN) into a standardized 15-column Excel and CSV CRM schema." />
+  <link rel="canonical" href="https://pablocirre.github.io/global-b2b-registry-schema-2026/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Global B2B Company Registry Schema & Multi-Country Data Benchmark (2026)",
+    "description": "Open 15-column CRM ingestion schema benchmarking 31 national corporate registries across Europe, North America, Latin America, and MENA.",
+    "author": {
+      "@type": "Person",
+      "name": "Pablo Cirre",
+      "url": "https://github.com/PabloCirre"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BigDataLowCost",
+      "url": "https://bigdatalowcost.com/"
+    },
+    "dateModified": "2026-11-15"
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f8fafc; color: #0f172a; line-height: 1.65; }
+    header { background: #0f172a; color: #fff; padding: 48px 20px; border-bottom: 4px solid #0d9488; }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    .badge { display: inline-block; background: #0d9488; color: #fff; font-weight: 800; font-size: 12px; padding: 4px 12px; border-radius: 999px; letter-spacing: .04em; text-transform: uppercase; }
+    h1 { font-size: 34px; line-height: 1.2; margin: 14px 0 10px; }
+    .sub { color: #cbd5e1; font-size: 17px; margin: 0; }
+    main { max-width: 980px; margin: 32px auto; padding: 0 20px 60px; }
+    .card { background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 26px 28px; margin-bottom: 24px; }
+    .tldr { background: #f0fdfa; border: 1px solid #99f6e4; border-left: 5px solid #0d9488; }
+    h2 { font-size: 22px; margin-top: 0; color: #0f172a; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
+    th { background: #0f172a; color: #fff; text-align: left; padding: 10px 12px; }
+    td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    img { max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #cbd5e1; margin: 14px 0; }
+    a { color: #0f766e; font-weight: 700; }
+    code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="badge">Open B2B Data Governance • Q4 2026</span>
+      <h1>Global B2B Company Registry Schema &amp; Multi-Country Benchmark</h1>
+      <p class="sub">Unifying 31 corporate registries (<code>NAICS</code>, <code>NACE Rev. 2</code>, <code>KVK SBI</code>, <code>Handelsregister</code>, and <code>DENUE SCIAN</code>) into a deterministic 15-column CRM spreadsheet format.</p>
+    </div>
+  </header>
+  <main>
+    <section class="card tldr">
+      <h2>Executive Summary (TL;DR)</h2>
+      <p>Cross-border revenue and data engineering teams frequently lose 40–60% of ETL preparation time harmonizing incompatible government business directories. This benchmark defines a clean <strong>15-column flat-file schema</strong> spanning <strong>10,850,000+ active companies</strong> and <strong>6,450,000+ DNS/MX-verified corporate emails</strong> across Europe, North America, Latin America, and MENA, aligned with <a href="https://bigdatalowcost.com/databases/europe-b2b-email-business-database-pack/">the BigDataLowCost Europe 19-country B2B registry database</a> and <a href="https://bigdatalowcost.com/databases/best-mexico-email-business-database/">the BigDataLowCost Mexico DENUE SCIAN corporate email dataset</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>What Official Registries Power Cross-Border B2B Datasets?</h2>
+      <p>Reliable company lists derive from statutory commercial filings rather than stale web scrapes. Key national taxonomies documented in the <a href="https://en.wikipedia.org/wiki/North_American_Industry_Classification_System">North American Industry Classification System</a> and <a href="https://en.wikipedia.org/wiki/Statistical_Classification_of_Economic_Activities_in_the_European_Community">EU NACE Rev. 2 framework</a> map across 7 priority B2B hubs:</p>
+      <table>
+        <thead>
+          <tr><th>Jurisdiction</th><th>Primary Public Registry</th><th>Classification</th><th>Active Companies</th><th>Verified Emails</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Europe (19 Countries)</td><td>Companies House, Handelsregister, SIRENE, KVK, BORME</td><td>NACE Rev. 2 / UK SIC</td><td>7,385,000+</td><td>3,820,000+</td></tr>
+          <tr><td>United States (50 States)</td><td>Secretaries of State &amp; SEC EDGAR</td><td>6-Digit NAICS &amp; 4-Digit SIC</td><td>1,064,565</td><td>596,248</td></tr>
+          <tr><td>United Kingdom</td><td>UK Companies House Official Register</td><td>UK SIC 2007</td><td>840,500+</td><td>458,200+</td></tr>
+          <tr><td>Mexico (32 States)</td><td>INEGI DENUE &amp; SIEM</td><td>SCIAN / NAICS</td><td>685,400+</td><td>384,200+</td></tr>
+          <tr><td>Netherlands</td><td>KVK Kamer van Koophandel</td><td>SBI 2008 / NACE Rev. 2</td><td>612,400+</td><td>331,000+</td></tr>
+          <tr><td>Canada</td><td>Corporations Canada</td><td>NAICS Canada (6-Digit)</td><td>421,300+</td><td>241,900+</td></tr>
+          <tr><td>UAE &amp; Dubai Freezones</td><td>Dubai DED, DMCC &amp; JAFZA</td><td>ISIC Rev. 4 / DED</td><td>186,400+</td><td>124,800+</td></tr>
+        </tbody>
+      </table>
+      <img src="infographic-global-registry-2026.png" alt="Global B2B Corporate Registry Coverage across 31 Countries in 2026" />
+    </section>
+
+    <section class="card">
+      <h2>How Do Flat-File Registry Exports Compare Against Per-Seat SaaS Credits?</h2>
+      <p>Per-seat SaaS credit platforms throttle bulk territory planning and charge per exported contact. Unlocked <code>.xlsx</code> and UTF-8 <code>.csv</code> flat files give RevOps, Salesforce, HubSpot, Clay, and Python/DuckDB teams full ownership of every row in the target country.</p>
+      <img src="infographic-flatfile-vs-saas-2026.png" alt="Flat-File B2B Registry Ownership vs Per-Seat SaaS Credit Platforms Benchmark" />
+      <img src="infographic-registry-taxonomy-2026.png" alt="National Corporate Registry Taxonomy Table for US, Netherlands, Germany, UK, Mexico, Canada, and UAE" />
+      <p>Source code &amp; schema artifacts: <a href="https://github.com/PabloCirre/global-b2b-registry-schema-2026">PabloCirre/global-b2b-registry-schema-2026 on GitHub</a> (MIT License).</p>
+    </section>
+  </main>
+</body>
+</html>
